@@ -1,0 +1,261 @@
+#calculator { max-width: 1260px; margin: 0 auto 100px auto; position: relative; overflow: auto; }
+#calculator .btn {color:#000;}
+#shadow { width: 100%; height: 100%; background: rgba(0,0,0,.5); z-index: 1; position: absolute; top: 0; left: 0; display: none; }
+
+.panel
+{ 
+	display: inline-block; 
+	width: 377px; /*width: 32%; *//*change from percentage to stop fluctuations in col widths*/
+	float: left; 
+}
+	.panel h1 {
+		font-size: 24px;
+		font-family: 'Titillium Web', sans-serif;
+		font-weight: 400;
+		color: #ffc861;
+		border-bottom: 1px solid #ffc861;
+		padding-bottom: 15px;
+		margin-right: 20px;
+	}
+	.panel h3 {
+		line-height: 1;
+		color: #fff;
+		font-size: 18px;
+		font-family: 'Titillium Web', sans-serif;
+		font-weight: 400;
+	}
+	.panel p { font-size: 13px; margin: 0 0 10px 0; }
+	.panel p.note { font-size: 12px; margin: 20px 0 !important;clear:both;}
+	.panel span { display: block; float: right; width: 50%;}
+	.panel span.recommendation{
+		display: block;
+		float: left;
+		clear: both;
+		margin-bottom: 20px;
+		width:100%;
+	}
+	.panel .details
+	{ 
+		height:400px;
+		min-height: 400px;
+		background: #222;
+		padding: 20px;
+		margin: 0 20px 0 0;
+	}
+		.panel .details span
+		{ 
+			width: 40%;
+			color:#fff;
+			/*background: #1a1a1a;*/
+		}
+		.panel .details span.txt { display: block; float: left; width: 60%; background: #000; color: #fff; padding: 5px; margin-bottom: 3px; }
+		.panel .details p 
+		{
+			color: #979899; 
+			margin-bottom: 5px; 
+			font-size: 13px; 
+		}
+		.panel.over-ride .details { min-height: initial; }
+		.panel select { color: #000; }
+		.panel input[type="checkbox"]{
+			/*Align checkbox w/text*/
+			vertical-align: -3px;
+		}
+		.p3 p span {
+			width: 70%;
+		}
+.panel select { max-width: 80%; }
+.panel hr.gradient {
+	margin: 20px 0;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+}
+.fields { min-height: 280px; }
+
+.toggle
+{ 
+	background: #222;
+	color: #fff;
+	padding: 10px;
+	margin: 20px 20px 0 0;
+}
+	.toggle h3 
+	{ 
+		/* margin: 0 0 0 20px;
+		cursor: pointer; */
+		padding-left: 42px;
+		color: #979899;
+		background: transparent url('images/icon-open-close-3.png') no-repeat 0 8px;
+		cursor: pointer;
+		line-height: 36px;
+		margin-bottom: 0;
+	}
+		.toggle h3:hover,
+		.toggle h3.active
+		{
+			color: #91c73d;
+		}
+		.toggle h3:hover { background-position: 0 -120px; }
+		.toggle h3.active { background-position: 0 -248px; }
+
+.panel input
+{ 
+	border: 0; 
+	padding: 3px; 
+	width: 65%;
+	background: #222;;
+	/*background: #1a1a1a;*/
+	/*background: #cecece; 
+	color: #000; */
+}
+.panel input.customize { width: auto; margin: 0 5px; }
+.panel input.editable { color:#000; background: #D8BD42; text-align:right;}
+.panel input.editable.red, input.red, option.red { background: #D85042 !important; color: #fff; }
+.panel input.editable.green, input.green, option.green { background: #91c73d; color: #000; font-weight:bold; }
+
+.buttons { }
+.panel span.btn
+{ 
+	float: none; 
+/*	margin-bottom: 0 15px; 
+	width: 100%; */
+}
+/*.panel .btn, #quoteform .btn { display: block; padding: 12px 20px; font-weight: bold; text-align:center; font-size: 15px; cursor:pointer; color: #222; min-width: 200px; border: 0; }
+.panel .btn.customize { background: yellow; }
+.panel .btn.quote, #quoteform .btn.quote { background: green; }*/
+
+.btn {
+	color: #fff;
+    background-color: #91c73d;
+    display: inline-block;
+    min-width: 156px;
+    line-height: 40px;
+    margin: 20px 0 20px 0;
+    padding: 0 20px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 600;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+	height: 40px;
+	width: 90%;
+	cursor:pointer;
+}
+
+#quoteform { overflow: auto; /* position: absolute; */ width: 1260px; margin: 0 auto; z-index: 5000;  padding: 25px; height: auto; background: #333; /* display: none; */ color: #979899; /* top:0; left:0; */ }
+	#quoteform h1 {
+		font-size: 30px;
+		font-family: 'Titillium Web', sans-serif;
+		font-weight: 400;
+		color: #ffc861;
+		margin-bottom:0;
+	}
+	#quoteform h1 + p {
+		margin-bottom:20px;
+	}
+	#quoteform h2 {
+		line-height: 1;
+		color: #91c73d;
+		font-size: 18px;
+		font-family: 'Titillium Web', sans-serif;
+		font-weight: 400;
+	}
+	#quoteform p
+	{
+		line-height: 2.8;
+		margin-bottom: 5px;
+	}
+	#quoteform input[type=text],
+	#quoteform input[type=phone],
+	#quoteform input[type=email],
+	#quoteform textarea
+	{ 
+		color: #FFF;
+		width:65%;
+		border-radius: 3px;
+		-moz-border-radius: 3px;
+		-webkit-border-radius: 3px;
+		outline: none;
+		padding: 10px;
+		-webkit-box-shadow: inset 2px 2px 2px 0px #000000;
+		-moz-box-shadow: inset 2px 2px 2px 0px #000000;
+		box-shadow: inset 2px 2px 2px 0px #000000;
+		background-color: #1a1a1a;
+	}
+	#quoteform textarea { height: 100px; }
+	#quoteform input[type=text]:focus
+	{ 
+		color: #FFF;
+	}
+	#quoteform input[type=submit]
+	{ 
+		color: #FFF;
+		width:40%;
+	}
+	#quoteform span
+	{
+    	color:#FFF;
+		float: right;
+    	font-weight: 600;
+	}
+	#quoteform span.required-label
+	{
+		color:#ffc861;
+		float:none;
+	}
+	#quoteform .note
+	{
+		color:#dadad9;
+		line-height:1.8;
+	}
+.hidden { display: none; }
+
+.error-msg { /*margin-top: 50px; padding: 20px;*/ }
+	.error-msg p 
+	{ 
+		font-size: 15px;
+		font-family: arial;
+		border: 1px solid #D85042;
+		padding: 10px;
+		margin: 40px 10px 0;
+		width: 90%;
+		color: #D85042;
+		background: #250906;
+		display:none;
+	}
+
+.column { width: 45%; margin-right: 25px; float: left; }
+.column input, .column textarea { float: right; margin-right: 5px; border: 0; padding:2px; }
+.column input.formerror { background: lightpink; }
+
+
+span.divider { display: block; height: 15px; margin: 0; width:100%; }
+span.errors 
+	{
+		/*display: block; font-size: 18px; color: gold; */
+		font-size: 15px;
+		font-family: arial;
+		font-weight: normal !important;
+		border: 1px solid #D85042;
+		padding: 10px;
+		margin: 10px 10px 0;
+		width: 90%;
+		color: #D85042 !important;
+		background: #250906;
+		display:none;
+	}
+.classA,.classB,.classC,.classD{ text-align:right;background-color:#222;}
+
+.total-deflection input,
+.total-bearing-misalignment input,
+.total-shaft-deflection input
+{
+	background-color:#000;
+	color:#FFF;
+	font-weight:normal;
+}
+.required {/*border: 1px solid #D85042 !important;*/}
